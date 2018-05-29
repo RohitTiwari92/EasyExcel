@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using Microsoft.Office.Tools.Ribbon;
 
 namespace EasyExcel
@@ -13,9 +14,18 @@ namespace EasyExcel
 
         }
 
-        private void button1_Click(object sender, RibbonControlEventArgs e)
+        private void SaveWorkBook_Click(object sender, RibbonControlEventArgs e)
         {
-            //save the workbook on its current state
+            var saveDialog = new SaveFileDialog()
+            {
+                Title = "Save As",
+                Filter = "Excel WorkBook (*.xlsx)|(*.xls)",
+                AddExtension = true,
+                CheckPathExists = true
+            };
+
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+                Globals.ThisAddIn.Application.ActiveWorkbook.SaveCopyAs(saveDialog.FileName);
         }
     }
 }
