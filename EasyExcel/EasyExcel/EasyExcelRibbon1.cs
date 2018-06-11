@@ -17,18 +17,8 @@ namespace EasyExcel
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            var saveDialog = new SaveFileDialog()
-            {
-                Title = "Save As",
-                Filter = "Excel WorkBook (*.xlsx)|(*.xls)",
-                AddExtension = true,
-                CheckPathExists = true
-            };
-
-            if (saveDialog.ShowDialog() == DialogResult.OK)
-                Globals.ThisAddIn.Application.ActiveWorkbook.SaveCopyAs(saveDialog.FileName);
-
-
+            CommitCommant ccobj = new CommitCommant();
+            ccobj.ShowDialog();
         }
     }
 }
