@@ -15,7 +15,7 @@ namespace EasyExcel
 
         }
 
-        private void button1_Click(object sender, RibbonControlEventArgs e)
+        private void SaveWorkBook_Click(object sender, RibbonControlEventArgs e)
         {
             CommitCommant ccobj = new CommitCommant();
             ccobj.ShowDialog();
