@@ -19,13 +19,21 @@ namespace EasyExcel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(commitmessage.Text))
-            {
-                GitVersionControl gitobj = new GitVersionControl(Globals.ThisAddIn.Application.ActiveWorkbook.FullName, commitmessage.Text);
-                gitobj.commmit();
-            }
-            else
-                MessageBox.Show("Please enter message for this commit");
+
+           
+
+                if (!string.IsNullOrEmpty(commitmessage.Text))
+                {
+                    GitVersionControlpush gitobj = new GitVersionControlpush(Globals.ThisAddIn.Application.ActiveWorkbook.FullName, commitmessage.Text);
+                    gitobj.commmit();
+                }
+                else
+                    MessageBox.Show("Please enter message for this version");
+
+
+            this.Close();
+         
+           
         }
     }
 }

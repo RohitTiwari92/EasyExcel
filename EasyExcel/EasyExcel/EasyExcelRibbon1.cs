@@ -17,8 +17,16 @@ namespace EasyExcel
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            CommitCommant ccobj = new CommitCommant();
-            ccobj.ShowDialog();
+            
+            if (Globals.ThisAddIn.Application.ActiveWorkbook.Saved && !string.IsNullOrEmpty(Globals.ThisAddIn.Application.ActiveWorkbook.Path))
+            {
+                CommitCommant ccobj = new CommitCommant();
+                ccobj.ShowDialog();  
+            }
+            else
+            {
+                MessageBox.Show("Please save your work. press {Ctrl+s}");
+            }
         }
     }
 }

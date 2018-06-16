@@ -62,7 +62,7 @@
             this.SaveWorkBook.Label = "Save your Effort";
             this.SaveWorkBook.Name = "SaveWorkBook";
             this.SaveWorkBook.ShowImage = true;
-            this.SaveWorkBook.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.SaveWorkBook_Click);
+            this.SaveWorkBook.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
             // 
             // EasyExcelRibbon1
             // 

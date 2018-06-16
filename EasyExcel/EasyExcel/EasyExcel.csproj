@@ -171,6 +171,8 @@
       <DependentUpon>EasyExcelRibbon1.cs</DependentUpon>
     </Compile>
     <Compile Include="GitVersionControl.cs" />
+    <Compile Include="GitVersionControlpull.cs" />
+    <Compile Include="Model\GitlogModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

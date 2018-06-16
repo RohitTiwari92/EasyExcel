@@ -9,16 +9,16 @@ using LibGit2Sharp;
 namespace EasyExcel
 {
     //https://github.com/libgit2/libgit2sharp/wiki/LibGit2Sharp-Hitchhiker's-Guide-to-Git
-    public class GitVersionControl
+    public class GitVersionControlpush
     {
         private string _filepath;
         private string _message;
         private string dirpath;
-        public GitVersionControl(string filepath, string message)
+        public GitVersionControlpush(string filepath, string message)
         {
-            _filepath = filepath;
+            _filepath =Path.GetFileName( filepath);
             _message = message;
-            dirpath = Path.GetDirectoryName(_filepath);
+            dirpath = Path.GetDirectoryName(filepath);
         }
         public void commmit()
         {
@@ -37,7 +37,7 @@ namespace EasyExcel
         {
             using (var repo = new Repository(dirpath))
             {
-                repo.Index.Add(_filepath);
+                repo.Index.Add(@_filepath);
                 Signature author = new Signature("EasyExcel", "NA", DateTime.Now);
                 Signature committer = author;
                 Commit commit = repo.Commit(_message, committer, author);
