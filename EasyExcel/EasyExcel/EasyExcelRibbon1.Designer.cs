@@ -37,16 +37,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EasyExcelRibbon1));
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
+            this.security = this.Factory.CreateRibbonGroup();
             this.SaveWorkBook = this.Factory.CreateRibbonButton();
             this.GetallVersion = this.Factory.CreateRibbonButton();
+            this.Encrypt = this.Factory.CreateRibbonButton();
+            this.Decrypt = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
+            this.security.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab1
             // 
             this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.tab1.Groups.Add(this.group1);
+            this.tab1.Groups.Add(this.security);
             this.tab1.Label = "Easy Excel";
             this.tab1.Name = "tab1";
             // 
@@ -56,6 +61,13 @@
             this.group1.Items.Add(this.GetallVersion);
             this.group1.Label = "worksheets and Sheets ";
             this.group1.Name = "group1";
+            // 
+            // security
+            // 
+            this.security.Items.Add(this.Encrypt);
+            this.security.Items.Add(this.Decrypt);
+            this.security.Label = "security";
+            this.security.Name = "security";
             // 
             // SaveWorkBook
             // 
@@ -75,6 +87,24 @@
             this.GetallVersion.ShowImage = true;
             this.GetallVersion.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.GetallVersion_Click);
             // 
+            // Encrypt
+            // 
+            this.Encrypt.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Encrypt.Image = ((System.Drawing.Image)(resources.GetObject("Encrypt.Image")));
+            this.Encrypt.Label = "Encrypt";
+            this.Encrypt.Name = "Encrypt";
+            this.Encrypt.ShowImage = true;
+            this.Encrypt.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Encrypt_Click);
+            // 
+            // Decrypt
+            // 
+            this.Decrypt.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Decrypt.Image = ((System.Drawing.Image)(resources.GetObject("Decrypt.Image")));
+            this.Decrypt.Label = "Decrypt";
+            this.Decrypt.Name = "Decrypt";
+            this.Decrypt.ShowImage = true;
+            this.Decrypt.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Decrypt_Click);
+            // 
             // EasyExcelRibbon1
             // 
             this.Name = "EasyExcelRibbon1";
@@ -85,6 +115,8 @@
             this.tab1.PerformLayout();
             this.group1.ResumeLayout(false);
             this.group1.PerformLayout();
+            this.security.ResumeLayout(false);
+            this.security.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -95,6 +127,9 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton SaveWorkBook;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton GetallVersion;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup security;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton Encrypt;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton Decrypt;
     }
 
     partial class ThisRibbonCollection

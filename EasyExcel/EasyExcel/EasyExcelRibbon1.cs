@@ -17,11 +17,11 @@ namespace EasyExcel
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            
+
             if (Globals.ThisAddIn.Application.ActiveWorkbook.Saved && !string.IsNullOrEmpty(Globals.ThisAddIn.Application.ActiveWorkbook.Path))
             {
                 CommitCommant ccobj = new CommitCommant();
-                ccobj.ShowDialog();  
+                ccobj.ShowDialog();
             }
             else
             {
@@ -40,6 +40,23 @@ namespace EasyExcel
             {
                 MessageBox.Show("Please save your work. press {Ctrl+s}");
             }
+        }
+
+        private void Encrypt_Click(object sender, RibbonControlEventArgs e)
+        {
+           
+
+            DataEncrypterDecrypterPassword edobj = new DataEncrypterDecrypterPassword(0);
+            edobj.Show();
+
+
+            
+        }
+
+        private void Decrypt_Click(object sender, RibbonControlEventArgs e)
+        {
+            DataEncrypterDecrypterPassword edobj = new DataEncrypterDecrypterPassword(1);
+            edobj.Show();
         }
     }
 }

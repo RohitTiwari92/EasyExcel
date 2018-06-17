@@ -164,6 +164,14 @@
     <Compile Include="CommitCommant.Designer.cs">
       <DependentUpon>CommitCommant.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataEncrypterDecrypterPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEncrypterDecrypterPassword.Designer.cs">
+      <DependentUpon>DataEncrypterDecrypterPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEncrypterDecrypter\DataDecrypter.cs" />
+    <Compile Include="DataEncrypterDecrypter\DataEncrypter.cs" />
     <Compile Include="EasyExcelRibbon1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -176,14 +184,17 @@
     <Compile Include="Fileversions.Designer.cs">
       <DependentUpon>Fileversions.cs</DependentUpon>
     </Compile>
-    <Compile Include="GitVersionControl.cs" />
-    <Compile Include="GitVersionControlpull.cs" />
+    <Compile Include="GitVersioning\GitVersionControl.cs" />
+    <Compile Include="GitVersioning\GitVersionControlpull.cs" />
     <Compile Include="Model\GitlogModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
     <EmbeddedResource Include="CommitCommant.resx">
       <DependentUpon>CommitCommant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEncrypterDecrypterPassword.resx">
+      <DependentUpon>DataEncrypterDecrypterPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EasyExcelRibbon1.resx">
       <DependentUpon>EasyExcelRibbon1.cs</DependentUpon>
