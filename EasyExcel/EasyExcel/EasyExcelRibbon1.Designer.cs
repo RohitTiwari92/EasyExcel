@@ -37,9 +37,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EasyExcelRibbon1));
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.security = this.Factory.CreateRibbonGroup();
             this.SaveWorkBook = this.Factory.CreateRibbonButton();
             this.GetallVersion = this.Factory.CreateRibbonButton();
+            this.security = this.Factory.CreateRibbonGroup();
             this.Encrypt = this.Factory.CreateRibbonButton();
             this.Decrypt = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
@@ -62,18 +62,11 @@
             this.group1.Label = "worksheets and Sheets ";
             this.group1.Name = "group1";
             // 
-            // security
-            // 
-            this.security.Items.Add(this.Encrypt);
-            this.security.Items.Add(this.Decrypt);
-            this.security.Label = "security";
-            this.security.Name = "security";
-            // 
             // SaveWorkBook
             // 
             this.SaveWorkBook.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.SaveWorkBook.Image = ((System.Drawing.Image)(resources.GetObject("SaveWorkBook.Image")));
-            this.SaveWorkBook.Label = "Snapshot";
+            this.SaveWorkBook.Label = "State save";
             this.SaveWorkBook.Name = "SaveWorkBook";
             this.SaveWorkBook.ShowImage = true;
             this.SaveWorkBook.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
@@ -82,10 +75,17 @@
             // 
             this.GetallVersion.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.GetallVersion.Image = ((System.Drawing.Image)(resources.GetObject("GetallVersion.Image")));
-            this.GetallVersion.Label = "Get all snapshot";
+            this.GetallVersion.Label = "Get all states";
             this.GetallVersion.Name = "GetallVersion";
             this.GetallVersion.ShowImage = true;
             this.GetallVersion.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.GetallVersion_Click);
+            // 
+            // security
+            // 
+            this.security.Items.Add(this.Encrypt);
+            this.security.Items.Add(this.Decrypt);
+            this.security.Label = "security";
+            this.security.Name = "security";
             // 
             // Encrypt
             // 

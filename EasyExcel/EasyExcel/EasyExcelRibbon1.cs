@@ -44,13 +44,8 @@ namespace EasyExcel
 
         private void Encrypt_Click(object sender, RibbonControlEventArgs e)
         {
-           
-
             DataEncrypterDecrypterPassword edobj = new DataEncrypterDecrypterPassword(0);
-            edobj.Show();
-
-
-            
+            edobj.Show();          
         }
 
         private void Decrypt_Click(object sender, RibbonControlEventArgs e)

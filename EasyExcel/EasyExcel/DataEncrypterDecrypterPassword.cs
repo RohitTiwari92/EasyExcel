@@ -16,7 +16,7 @@ namespace EasyExcel
     {
         public DataEncrypterDecrypterPassword(int i)
         {
-           
+
             InitializeComponent();
             if (i == 1)
             {
@@ -30,37 +30,44 @@ namespace EasyExcel
 
         private void Process_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void Encrypt_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(PasswordBox.Text))
             {
-                MessageBox.Show("Please Enter the Password");
+                MessageBox.Show("Please Enter the correct Password");
             }
             else
             {
-                Range selection = Globals.ThisAddIn.Application.Selection as Range;
-                foreach (object cell in selection.Cells)
-
+                if (PasswordBox.Text.Length != 16)
                 {
-
-                    try
+                    MessageBox.Show("Please Enter the correct Password");
+                }
+                else
+                {
+                    Range selection = Globals.ThisAddIn.Application.Selection as Range;
+                    foreach (object cell in selection.Cells)
 
                     {
-                        string data = Convert.ToString(((Range)cell).Value2);
-                       string edata= DataEncrypter.Encrypt(data, PasswordBox.Text);
-                        ((Range)cell).Value2 = edata;
+
+                        try
+
+                        {
+                            string data = Convert.ToString(((Range)cell).Value2);
+                            string edata = DataEncrypter.Encrypt(data, PasswordBox.Text);
+                            ((Range)cell).Value2 = edata;
+                        }
+                        catch (Exception ex)
+                        {
+
+                            //MessageBox.Show("NULL VALUE");
+
+                        }
+
+
                     }
-                    catch(Exception ex)
-                    {
-
-                        //MessageBox.Show("NULL VALUE");
-
-                    }
-
-
                 }
             }
         }
@@ -91,7 +98,7 @@ namespace EasyExcel
 
                     {
 
-                     //   MessageBox.Show("NULL VALUE");
+                        //   MessageBox.Show("NULL VALUE");
 
                     }
 
