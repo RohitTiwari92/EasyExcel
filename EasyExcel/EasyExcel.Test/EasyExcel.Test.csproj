@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="GitPullTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GetVersionFilefromGitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

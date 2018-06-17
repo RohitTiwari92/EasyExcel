@@ -28,5 +28,18 @@ namespace EasyExcel
                 MessageBox.Show("Please save your work. press {Ctrl+s}");
             }
         }
+
+        private void GetallVersion_Click(object sender, RibbonControlEventArgs e)
+        {
+            if (Globals.ThisAddIn.Application.ActiveWorkbook.Saved && !string.IsNullOrEmpty(Globals.ThisAddIn.Application.ActiveWorkbook.Path))
+            {
+                Fileversions fileversions = new Fileversions();
+                fileversions.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please save your work. press {Ctrl+s}");
+            }
+        }
     }
 }

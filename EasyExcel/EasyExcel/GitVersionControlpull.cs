@@ -25,16 +25,43 @@ namespace EasyExcel
             var dateformat = "dd-MM-yyyy HH:mm";
             using (var repo = new Repository(@_dirpath))
             {
-                foreach (Commit c in repo.Commits.Take(15))
+                foreach (Commit c in repo.Commits)
                 {
+                    
                     GitlogModel logdata = new GitlogModel();
-                    logdata.comment = c.Message;
-                    logdata.date = c.Author.When.ToString(dateformat);
+                    logdata.Comment = c.Message;
+                    logdata.Date = c.Author.When.ToString(dateformat);
+                    logdata.sha = c.Sha;
                     model.Add(logdata);
                 }
             }
             return model;
         }
+
+        public string GetFile(string sha)
+        {
+            string temppath = Path.GetTempPath();
+            string tempdirname = DateTime.Now.ToString("ddMMyyyyHHmmss");
+            Directory.CreateDirectory(temppath + tempdirname);
+            string veliddirpathgit = temppath + tempdirname + @"\";
+            Repository.Clone(_dirpath, veliddirpathgit);
+
+            if (Repository.IsValid(Path.GetDirectoryName(veliddirpathgit)))
+            {
+                using (var repo = new Repository(veliddirpathgit))
+                {
+                    Commit previousCommit = repo.Head.Commits.Where(x=>x.Sha.Equals(sha)).FirstOrDefault();
+                    repo.Reset(ResetMode.Hard, previousCommit);
+
+                }
+
+            }
+
+
+            return veliddirpathgit+ @"\"+_filepath;
+        }
+
+       
 
     }
 }

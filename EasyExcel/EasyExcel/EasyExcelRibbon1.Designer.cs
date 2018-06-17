@@ -38,6 +38,7 @@
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
             this.SaveWorkBook = this.Factory.CreateRibbonButton();
+            this.GetallVersion = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +53,7 @@
             // group1
             // 
             this.group1.Items.Add(this.SaveWorkBook);
+            this.group1.Items.Add(this.GetallVersion);
             this.group1.Label = "worksheets and Sheets ";
             this.group1.Name = "group1";
             // 
@@ -59,10 +61,19 @@
             // 
             this.SaveWorkBook.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.SaveWorkBook.Image = ((System.Drawing.Image)(resources.GetObject("SaveWorkBook.Image")));
-            this.SaveWorkBook.Label = "Save your Effort";
+            this.SaveWorkBook.Label = "Snapshot";
             this.SaveWorkBook.Name = "SaveWorkBook";
             this.SaveWorkBook.ShowImage = true;
             this.SaveWorkBook.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
+            // 
+            // GetallVersion
+            // 
+            this.GetallVersion.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.GetallVersion.Image = ((System.Drawing.Image)(resources.GetObject("GetallVersion.Image")));
+            this.GetallVersion.Label = "Get all snapshot";
+            this.GetallVersion.Name = "GetallVersion";
+            this.GetallVersion.ShowImage = true;
+            this.GetallVersion.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.GetallVersion_Click);
             // 
             // EasyExcelRibbon1
             // 
@@ -83,6 +94,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton SaveWorkBook;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton GetallVersion;
     }
 
     partial class ThisRibbonCollection
