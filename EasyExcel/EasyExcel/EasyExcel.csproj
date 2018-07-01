@@ -164,6 +164,18 @@
     <Compile Include="CommitCommant.Designer.cs">
       <DependentUpon>CommitCommant.cs</DependentUpon>
     </Compile>
+    <Compile Include="CompareColumns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompareColumns.Designer.cs">
+      <DependentUpon>CompareColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compare\CompareFunctionEnum.cs" />
+    <Compile Include="Compare\CompareProcess.cs" />
+    <Compile Include="Compare\DuplicateCompare.cs" />
+    <Compile Include="Compare\GreaterthanvaluesinColumn_1_fromColumn_2.cs" />
+    <Compile Include="Compare\ICompare.cs" />
+    <Compile Include="Compare\LesserthanvaluesinColumn_1_fromColumn_2.cs" />
     <Compile Include="DataEncrypterDecrypterPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +204,9 @@
     </Compile>
     <EmbeddedResource Include="CommitCommant.resx">
       <DependentUpon>CommitCommant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompareColumns.resx">
+      <DependentUpon>CompareColumns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataEncrypterDecrypterPassword.resx">
       <DependentUpon>DataEncrypterDecrypterPassword.cs</DependentUpon>
@@ -232,6 +247,7 @@
     </Compile>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

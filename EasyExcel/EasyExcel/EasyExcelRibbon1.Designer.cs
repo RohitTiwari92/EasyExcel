@@ -42,9 +42,12 @@
             this.security = this.Factory.CreateRibbonGroup();
             this.Encrypt = this.Factory.CreateRibbonButton();
             this.Decrypt = this.Factory.CreateRibbonButton();
+            this.Data = this.Factory.CreateRibbonGroup();
+            this.Comparebtn = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.security.SuspendLayout();
+            this.Data.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab1
@@ -52,6 +55,7 @@
             this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.tab1.Groups.Add(this.group1);
             this.tab1.Groups.Add(this.security);
+            this.tab1.Groups.Add(this.Data);
             this.tab1.Label = "Easy Excel";
             this.tab1.Name = "tab1";
             // 
@@ -105,6 +109,21 @@
             this.Decrypt.ShowImage = true;
             this.Decrypt.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Decrypt_Click);
             // 
+            // Data
+            // 
+            this.Data.Items.Add(this.Comparebtn);
+            this.Data.Label = "Data";
+            this.Data.Name = "Data";
+            // 
+            // Comparebtn
+            // 
+            this.Comparebtn.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Comparebtn.Image = ((System.Drawing.Image)(resources.GetObject("Comparebtn.Image")));
+            this.Comparebtn.Label = "Compare";
+            this.Comparebtn.Name = "Comparebtn";
+            this.Comparebtn.ShowImage = true;
+            this.Comparebtn.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Comparebtn_Click);
+            // 
             // EasyExcelRibbon1
             // 
             this.Name = "EasyExcelRibbon1";
@@ -117,6 +136,8 @@
             this.group1.PerformLayout();
             this.security.ResumeLayout(false);
             this.security.PerformLayout();
+            this.Data.ResumeLayout(false);
+            this.Data.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -130,6 +151,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup security;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton Encrypt;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton Decrypt;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup Data;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton Comparebtn;
     }
 
     partial class ThisRibbonCollection

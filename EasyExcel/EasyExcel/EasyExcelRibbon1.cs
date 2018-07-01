@@ -53,5 +53,11 @@ namespace EasyExcel
             DataEncrypterDecrypterPassword edobj = new DataEncrypterDecrypterPassword(1);
             edobj.Show();
         }
+
+        private void Comparebtn_Click(object sender, RibbonControlEventArgs e)
+        {
+            CompareColumns comcolobj = new CompareColumns();
+            comcolobj.Show();
+        }
     }
 }
