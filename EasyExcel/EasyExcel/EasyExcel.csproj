@@ -173,10 +173,10 @@
     <Compile Include="Compare\CompareFunctionEnum.cs" />
     <Compile Include="Compare\CompareProcess.cs" />
     <Compile Include="Compare\DuplicateCompare.cs" />
-    <Compile Include="Compare\GreaterthanvaluesinColumn_1_fromColumn_2.cs" />
     <Compile Include="Compare\ICompare.cs" />
-    <Compile Include="Compare\LesserthanvaluesinColumn_1_fromColumn_2.cs" />
     <Compile Include="Compare\UniqueCompare.cs" />
+    <Compile Include="Compare\UniqueinConefromCtwoCompare.cs" />
+    <Compile Include="Compare\UniqueinCtwofromConeCompare.cs" />
     <Compile Include="DataEncrypterDecrypterPassword.cs">
       <SubType>Form</SubType>
     </Compile>

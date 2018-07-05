@@ -38,9 +38,12 @@ namespace EasyExcel.Compare
                 case CompareFunctionEnum.Unique:
                     Strategy = new UniqueCompare();
                     break;
-              //  case CompareFunctionEnum.les1f2:
-                //    Strategy = new LesserthanvaluesinColumn_1_fromColumn_2();
-                  //  break;
+                case CompareFunctionEnum.Unique1f2:
+                    Strategy = new UniqueinConefromCtwoCompare();
+                    break;
+                case CompareFunctionEnum.Unique2f1:
+                    Strategy = new UniqueinCtwofromConeCompare();
+                    break;
                 default:
                     break;
             }
