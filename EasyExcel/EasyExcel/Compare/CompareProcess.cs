@@ -35,9 +35,9 @@ namespace EasyExcel.Compare
                 case CompareFunctionEnum.Dup:
                     Strategy = new DuplicateCompare();
                     break;
-                //case CompareFunctionEnum.gre1f2:
-                  //  Strategy = new GreaterthanvaluesinColumn_1_fromColumn_2();
-                    //break;
+                case CompareFunctionEnum.Unique:
+                    Strategy = new UniqueCompare();
+                    break;
               //  case CompareFunctionEnum.les1f2:
                 //    Strategy = new LesserthanvaluesinColumn_1_fromColumn_2();
                   //  break;

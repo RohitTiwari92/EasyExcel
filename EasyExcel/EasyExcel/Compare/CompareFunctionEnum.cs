@@ -11,8 +11,8 @@ namespace EasyExcel.Compare
     {
         [Description("Duplicate Items in Column 2")]
         Dup = 1,
-       // [Description("Greater than values in Column 1 from Column 2")]
-        //gre1f2 = 2,
+       [Description("Unique items in both column")]
+        Unique = 2,
         //[Description("Lesser than values in Column 1 from Column 2")]
         //les1f2 = 3,
       

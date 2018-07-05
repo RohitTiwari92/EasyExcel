@@ -176,6 +176,7 @@
     <Compile Include="Compare\GreaterthanvaluesinColumn_1_fromColumn_2.cs" />
     <Compile Include="Compare\ICompare.cs" />
     <Compile Include="Compare\LesserthanvaluesinColumn_1_fromColumn_2.cs" />
+    <Compile Include="Compare\UniqueCompare.cs" />
     <Compile Include="DataEncrypterDecrypterPassword.cs">
       <SubType>Form</SubType>
     </Compile>
