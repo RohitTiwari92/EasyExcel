@@ -37,17 +37,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EasyExcelRibbon1));
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
+            this.security = this.Factory.CreateRibbonGroup();
+            this.Data = this.Factory.CreateRibbonGroup();
+            this.SnapShot = this.Factory.CreateRibbonGroup();
             this.SaveWorkBook = this.Factory.CreateRibbonButton();
             this.GetallVersion = this.Factory.CreateRibbonButton();
-            this.security = this.Factory.CreateRibbonGroup();
             this.Encrypt = this.Factory.CreateRibbonButton();
             this.Decrypt = this.Factory.CreateRibbonButton();
-            this.Data = this.Factory.CreateRibbonGroup();
             this.Comparebtn = this.Factory.CreateRibbonButton();
+            this.Click = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.security.SuspendLayout();
             this.Data.SuspendLayout();
+            this.SnapShot.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab1
@@ -56,6 +59,7 @@
             this.tab1.Groups.Add(this.group1);
             this.tab1.Groups.Add(this.security);
             this.tab1.Groups.Add(this.Data);
+            this.tab1.Groups.Add(this.SnapShot);
             this.tab1.Label = "Easy Excel";
             this.tab1.Name = "tab1";
             // 
@@ -65,6 +69,25 @@
             this.group1.Items.Add(this.GetallVersion);
             this.group1.Label = "worksheets and Sheets ";
             this.group1.Name = "group1";
+            // 
+            // security
+            // 
+            this.security.Items.Add(this.Encrypt);
+            this.security.Items.Add(this.Decrypt);
+            this.security.Label = "security";
+            this.security.Name = "security";
+            // 
+            // Data
+            // 
+            this.Data.Items.Add(this.Comparebtn);
+            this.Data.Label = "Data";
+            this.Data.Name = "Data";
+            // 
+            // SnapShot
+            // 
+            this.SnapShot.Items.Add(this.Click);
+            this.SnapShot.Label = "SnapShot";
+            this.SnapShot.Name = "SnapShot";
             // 
             // SaveWorkBook
             // 
@@ -84,13 +107,6 @@
             this.GetallVersion.ShowImage = true;
             this.GetallVersion.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.GetallVersion_Click);
             // 
-            // security
-            // 
-            this.security.Items.Add(this.Encrypt);
-            this.security.Items.Add(this.Decrypt);
-            this.security.Label = "security";
-            this.security.Name = "security";
-            // 
             // Encrypt
             // 
             this.Encrypt.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -109,12 +125,6 @@
             this.Decrypt.ShowImage = true;
             this.Decrypt.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Decrypt_Click);
             // 
-            // Data
-            // 
-            this.Data.Items.Add(this.Comparebtn);
-            this.Data.Label = "Data";
-            this.Data.Name = "Data";
-            // 
             // Comparebtn
             // 
             this.Comparebtn.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -123,6 +133,15 @@
             this.Comparebtn.Name = "Comparebtn";
             this.Comparebtn.ShowImage = true;
             this.Comparebtn.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Comparebtn_Click);
+            // 
+            // Click
+            // 
+            this.Click.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Click.Image = ((System.Drawing.Image)(resources.GetObject("Click.Image")));
+            this.Click.Label = "Click";
+            this.Click.Name = "Click";
+            this.Click.ShowImage = true;
+            this.Click.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Click_1);
             // 
             // EasyExcelRibbon1
             // 
@@ -138,6 +157,8 @@
             this.security.PerformLayout();
             this.Data.ResumeLayout(false);
             this.Data.PerformLayout();
+            this.SnapShot.ResumeLayout(false);
+            this.SnapShot.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -153,6 +174,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton Decrypt;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup Data;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton Comparebtn;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup SnapShot;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton Click;
     }
 
     partial class ThisRibbonCollection

@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Office.Tools.Ribbon;
 using Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
+using EasyExcel.Snapshot;
 
 namespace EasyExcel
 {
@@ -58,6 +59,12 @@ namespace EasyExcel
         {
             CompareColumns comcolobj = new CompareColumns();
             comcolobj.Show();
+        }
+
+        private void Click_1(object sender, RibbonControlEventArgs e)
+        {
+            Snapshot.SnapShot snapShot = new SnapShot();
+            snapShot.CreateSnapShot();
         }
     }
 }
